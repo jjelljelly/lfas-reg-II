@@ -6,7 +6,7 @@ Data is collected and posted to Google Apps Script Web App, which creates a pdf 
 
 ## Libraries / Frameworks
 
- - (React)[https://reactjs.org/]
- - (places-autocomplete-react)[https://www.npmjs.com/package/places-autocomplete-react]
- - (React Signature Canvas)[https://www.npmjs.com/package/react-signature-canvas]
- - (Places Autocomplete)[https://developers.google.com/maps/documentation/javascript/places-autocomplete]
+ - [React](https://reactjs.org/)
+ - [places-autocomplete-react](https://www.npmjs.com/package/places-autocomplete-react)
+ - [React Signature Canvas](https://www.npmjs.com/package/react-signature-canvas)
+ - [Places Autocomplete](https://developers.google.com/maps/documentation/javascript/places-autocomplete)
