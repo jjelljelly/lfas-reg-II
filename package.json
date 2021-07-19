@@ -1,14 +1,17 @@
 {
-  "name": "lfas-reg-iii",
-  "version": "0.1.0",
+  "name": "lfas-reg-ii",
+  "version": "2.0.1",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "jquery": "^3.6.0",
+    "places-autocomplete-react": "^1.0.8",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
+    "react-signature-canvas": "^1.0.3",
     "web-vitals": "^1.0.1"
   },
   "scripts": {

@@ -1,25 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react';
+import Personal from './Personal';
+import Medical from './Medical';
+import Submit from './Submit';
+import Complete from './Complete';
 
 function App() {
+  const [stage, setStage] = useState('personal');
+  const [fields, setFields] = useState({});
+
+  //update the global variable, Fields, accessible to components via props
+  let updateFields = (name, value) => {
+    let temp = {...fields};
+    temp[name] = value;
+    setFields(temp);
+  }
+
+  //Rerender function for each stage of the form, accessible to components 'back' and 'next' buttons via props
+  let reRender = (e) => {
+    setStage(e)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    stage === "personal" ? 
+      <Personal 
+        reRender={reRender} 
+        fields={fields} 
+        updateFields={(name, value) => updateFields(name, value)} 
+        /> : 
+        stage === "medical" ? 
+          <Medical 
+            reRender={reRender} 
+            fields={fields} 
+            updateFields={(name, value) => updateFields(name, value)} 
+            /> : 
+            stage === "submit" ?
+              <Submit 
+                reRender={reRender} 
+                fields={fields} 
+                updateFields={(name, value) => updateFields(name, value)} 
+                /> : 
+                <Complete />
+  )
 }
 
 export default App;
